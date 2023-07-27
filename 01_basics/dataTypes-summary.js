@@ -35,6 +35,28 @@ let myName=function(){
 console.log(myName());
 
 
-console.log(typeof score,typeof name,typeof isLoggedIn,typeof userValue,typeof id,typeof scoreFloat,typeof outTemp);
+// console.log(typeof score,typeof name,typeof isLoggedIn,typeof userValue,typeof id,typeof scoreFloat,typeof outTemp);
 
-console.log(typeof myName,typeof studentDetails,typeof subjects);
+// console.log(typeof myName,typeof studentDetails,typeof subjects);
+
+
+// **************** Stack and Heap memory **********
+// Stack(primitive) ---> copy ---> call by value 
+// heap(non-primtive) ---> referenece(address)---> call by refernce 
+
+
+let myFirstPhonePrice=23000;
+console.log(myFirstPhonePrice);
+let mySecondPhonePrice=myFirstPhonePrice;
+mySecondPhonePrice=120000;
+console.log(mySecondPhonePrice);
+
+let userOne={
+    name:'ankit',
+    email:'ankit@google.com',
+};
+
+let userTwo=userOne;
+userTwo.name="puneet";
+console.log(userOne);
+console.log(userTwo);
