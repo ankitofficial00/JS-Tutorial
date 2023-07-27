@@ -20,7 +20,7 @@
 			"extensions": [
 				"esbenp.prettier-vscode",
 				"vscode-icons-team.vscode-icons",
-				"wayou.vscode-todo-highlight"
+				"wayou.vscode-todo-highlight","JavaScript (ES6) code snippets"
 			],
 			"settings": {
 				"editor.fontSize": 30,
