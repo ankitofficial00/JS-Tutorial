@@ -22,7 +22,8 @@
 				"vscode-icons-team.vscode-icons",
 				"wayou.vscode-todo-highlight",
 				"JavaScript (ES6) code snippets",
-				"xabikos.JavaScriptSnippets"
+				"xabikos.JavaScriptSnippets",
+				"rioukkevin.vscode-git-commit"
 			],
 			"settings": {
 				"editor.fontSize": 30,
