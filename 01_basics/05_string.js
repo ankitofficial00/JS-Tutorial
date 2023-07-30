@@ -49,5 +49,9 @@ let myName="ANKIT-YADAV-RAO";
 let newName=myName.split('-');
 console.log(newName);
 
-clg
 
+// various inbuilt method present in the string data types
+
+
+console.log("my name is ankit");
+ 
