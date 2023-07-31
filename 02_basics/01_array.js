@@ -14,3 +14,4 @@ newArr= myarr.join()
 console.log(myarr);
 console.log( typeof newArr);
 
+
