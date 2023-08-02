@@ -63,4 +63,19 @@ const data=[
     },
 
 ];
-console.log(data[1].material);
+// console.log(data[1].material);
+
+const course={
+    courseName:"js in hindi",
+    coursePrice:99999,
+    courseInstrcutor:"hitesh"
+};
+
+// console.log(course.courseInstrcutor);
+// de-structring  of objects 
+const {courseInstrcutor:ins,courseName:n,coursePrice:p}=course;
+// console.log(coursePrice);
+// console.log(courseInstrcutor);
+// console.log(courseName);
+console.log(ins);
+console.log(n,p);
