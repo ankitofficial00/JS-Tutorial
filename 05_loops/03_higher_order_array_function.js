@@ -39,3 +39,45 @@ const data={
 for(let key in data){
     console.log(data[key])
 }
+
+// FOR Each loop
+
+const coding=["cpp","javascript","python","ruby","c","java"];
+// coding.forEach((value,item)=>{
+//     console.log(value,item);
+// });
+
+// coding.forEach(function (item){
+//     console.log(item);
+// })
+
+// function printMe(item){
+//     console.log(item);
+// }
+// coding.forEach(printMe)
+
+// coding.forEach((value,index,arr)=>{
+//     console.log(value,index,arr);
+// })
+
+
+const myCoding=[
+    {
+        lanugageName:"javascript",
+        lanugageFileExtension:"js"
+    },
+    {
+        lanugageName:"java",
+        lanugageFileExtension:"java"
+    },
+     {
+        lanugageName:"c++",
+        lanugageFileExtension:"c++"
+    }
+]
+
+myCoding.forEach((item,index)=>{
+    // console.log(item,index);
+    // console.log(item,index);
+    console.log(myCoding[index]);
+})
