@@ -23,7 +23,8 @@
 				"wayou.vscode-todo-highlight",
 				"JavaScript (ES6) code snippets",
 				"xabikos.JavaScriptSnippets",
-				"rioukkevin.vscode-git-commit"
+				"rioukkevin.vscode-git-commit",
+				"ritwickdey.LiveServer"
 			],
 			"settings": {
 				"editor.fontSize": 30,
