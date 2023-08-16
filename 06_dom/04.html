@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212131; color: #fff;">
+    <ul class="language">
+        <li>
+            javascript
+        </li>
+    </ul>
+
+     <script> 
+
+        // function addLanguage(item){
+        //     const ele=document.createElement('li');
+        //     ele.innerHTML=`${item}`;
+        //     const ul=document.querySelector('.language');
+        //     ul.appendChild(ele);
+        // }
+        // addLanguage("php");
+        // addLanguage("css")
+        // addLanguage("cpp")
+        // addLanguage("java")
+        // addLanguage("python") 
+
+
+        // optimization way of adding element to the document of web page 
+
+        function addOptiLanguage(item){
+           const li= document.createElement('li');
+           li.appendChild(document.createTextNode(item));
+           document.querySelector('.language').appendChild(li);
+        }
+        
+        addOptiLanguage("c");
+        addOptiLanguage("typescript")
+        addOptiLanguage("golang")
+        addOptiLanguage("R")
+        addOptiLanguage("python")
+
+        // edit 
+
+        const fourth=document.querySelector('li:nth-child(4)');
+        // fourth.innerHTML="mojo"  ??  not an optimized way
+        const newli =document.createElement('ii');
+        newli.textContent="mojo";
+        // fourth.replaceWith(newli);
+       
+        const first=document.querySelector("li:first-child");
+        console.log(first);
+        const newLi=document.createElement("li");
+        newLi.appendChild(document.createTextNode("TypeScript"));
+        first.replaceWith(newLi);
+
+
+        // remove
+
+        const second=document.querySelector('li:nth-child(2)');
+        second.remove()
+        // fourth.remove();
+        let parent=document.querySelector('.language');
+        parent.remove();
+        
+    </script>
+</body>
+</html>
