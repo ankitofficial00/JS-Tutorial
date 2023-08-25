@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set timeout methods</title>
+  </head>
+  <body>
+    <h1>Chai Aur Code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+      /* setTimeout(function () {
+        document.querySelector("h1").innerHTML =
+          "Best Js Series Ever and High depth of knowledge and real time project with industry related.. ";
+      }, 5000);
+      const setName = function () {
+        console.log("ankit");
+      };
+      const changeMe = setTimeout(setName, 2000);
+      document.getElementById("stop").addEventListener("click", () => {
+        clearTimeout(changeMe);
+        console.log("settime out clear method apply");
+      }); 
+
+    function print() {
+        console.log("hello good morning dear my friends");
+      }
+
+      const p = setInterval(print, 2000);
+
+      document.getElementById("stop").addEventListener("click", () => {
+        clearInterval(p);
+        console.log("stopped");
+      }); 
+      
+
+      const hello = setInterval(() => {
+        console.log("set interval function start");
+        clearInterval(hello);
+      }, 3000);  */
+
+      const sayDate = function (str) {
+        console.log(Date.now(), str);
+      };
+      let id;
+      document.getElementById("start").addEventListener("click", () => {
+        Id = setInterval(sayDate, 3000, "hi ankit");
+      });
+
+      document.getElementById("stop").addEventListener("click", () => {
+        clearInterval(Id);
+      });
+    </script>
+  </body>
+</html>

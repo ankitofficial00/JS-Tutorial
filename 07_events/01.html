@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>htnml Events </title>
+    <title>html Events </title>
 </head>
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image</h2>
-    <div >
+    <div>
         <ul id="images">
             <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
             <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
@@ -20,7 +20,91 @@
 </body>
 <script>
     
-    
-   
+    // document.getElementById('owl').onclick=function(){
+    //     alert("cliked on owl")
+    // }
+    // both are not best method to apply the browser event 
+
+
+    document.getElementById('google').addEventListener('click',(e)=>{
+           e.preventDefault();
+        //    console.log(e.timeStamp);
+        //    console.log(e.target);
+        //    console.log(e.currentTarget);
+        //  console.log(e.type);
+        // console.log(e.clientY);
+        // console.log(e.screenY);
+        
+        // console.log(e.toElement);
+        console.log(e.altKey);
+        console.log(e.ctrlKey);
+        console.log(e.shiftKey);
+        // console.log(e.keycode);
+
+
+
+        /// event propgation 
+        document.getElementById("images").addEventListener("click",function(){
+             console.log("clicked on ul");
+        })
+
+
+        document.getElementById("owl").addEventListener("click",function(){
+            console.log("owl clicked");
+        })
+    },false)
+
+
+    // type
+    // timeStamp
+    // defaultPrevented
+// attachEvent()
+// jQuery--on 
+
+
+ // event propgation
+
+    // event bubbling  ---> it make bubble from inner to outer or bottom to top  for that the third parameter of add event listener is always false which is its default value
+
+    // event capturing ---> it exceuetued from outer to inner or top to bottom it only start when the parameter is true
+
+    // this whole is called event propgation
+    // it can be stopped by using a method
+    /*
+     document.getElementById("images").addEventListener(
+      "click",
+      function (e) {
+        console.log("clicked on ul");
+        // console.log(e.eventPhase);
+      },
+      false
+    );
+
+    document.getElementById("owl").addEventListener(
+      "click",
+      function (e) {
+        console.log("owl clicked");
+        e.stopPropagation();
+        // console.log(e.eventPhase);
+      },
+      false
+    );
+    */
+
+    document.getElementById("images").addEventListener(
+      "click",
+      function (e) {
+        console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        if (e.target.tagName === "IMG") {
+          console.log(e.target.id);
+          const removeIm = e.target.parentNode;
+          removeIm.remove();
+        }
+        // removeIm.parentNode.removeChild(removeIm);
+      },
+      false
+    );
+
 </script>
 </html>
